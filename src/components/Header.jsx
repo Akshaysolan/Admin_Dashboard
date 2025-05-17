@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   BsFillBellFill,
   BsFillEnvelopeFill,
@@ -73,7 +74,7 @@ function Header({ OpenSidebar }) {
                 ))}
               </div>
               <div className="dropdown-footer">
-                <a href="/notifications">View all notifications</a>
+                <Link to="/notifications">View all notifications</Link>
               </div>
             </div>
           )}
@@ -107,13 +108,13 @@ function Header({ OpenSidebar }) {
                 ))}
               </div>
               <div className="dropdown-footer">
-                <a href="/messages">View all messages</a>
+                <Link to="/messages">View all messages</Link>
               </div>
             </div>
           )}
         </div>
 
-        {/* Profile */}
+        {/* Profile - This was missing/misplaced in your original code */}
         <div className="header-icon-container" onClick={() => {
           setShowProfile(!showProfile);
           setShowNotifications(false);
@@ -134,15 +135,15 @@ function Header({ OpenSidebar }) {
                 </div>
               </div>
               <div className="dropdown-content">
-                <a href="/profile">
+                <Link to="/profile">
                   <i className="icon-user"></i> My Profile
-                </a>
-                <a href="/settings">
+                </Link>
+                <Link to="/settings">
                   <i className="icon-settings"></i> Settings
-                </a>
-                <a href="/logout">
+                </Link>
+                <Link to="/logout">
                   <i className="icon-logout"></i> Logout
-                </a>
+                </Link>
               </div>
             </div>
           )}

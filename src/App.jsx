@@ -10,6 +10,9 @@ import Customers from './components/Customers';
 import Inventory from './components/Inventory';
 import Reports from './components/Reports';
 import Settings from './components/Settings';
+import NotificationsPage from './components/NotificationsPage';
+import MessagesPage from './components/MessagesPage';
+import ProfilePage from './components/ProfilePage';
 
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
@@ -31,6 +34,9 @@ function App() {
           <Route path="/inventory" element={<Inventory />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/notifications" element={<NotificationsPage />} />
+          <Route path="/messages" element={<MessagesPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </div>
     </Router>
